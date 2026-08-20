@@ -176,6 +176,97 @@
       color: #061008 !important;
     }
 
+
+    /* PRODUCT DROPDOWN */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown details {
+      position: relative;
+    }
+
+    .nav-dropdown summary {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #c7d0c9;
+      font-size: .92rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .nav-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav-dropdown summary:hover,
+    .nav-dropdown summary:focus-visible {
+      color: #fff;
+    }
+
+    .dropdown-arrow {
+      color: var(--green);
+      font-size: .72rem;
+      transition: transform .2s ease;
+    }
+
+    .nav-dropdown details[open] .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 190px;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #09100b;
+      box-shadow: var(--shadow);
+      z-index: 1200;
+    }
+
+    .nav-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translateX(-50%) rotate(45deg);
+      background: #09100b;
+      border-left: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .nav-dropdown-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #fff !important;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-dropdown-menu a:hover,
+    .nav-dropdown-menu a:focus-visible {
+      background: rgba(46,229,35,.10);
+      color: var(--green-soft) !important;
+    }
+
+    .external-arrow {
+      color: var(--green);
+      font-size: 1rem;
+    }
+
     .menu-button {
       display: none;
       width: 44px;
@@ -707,6 +798,26 @@
 
     @media (max-width: 860px) {
       .brand-logo { height: 48px; max-width: 165px; }
+      .nav-dropdown summary {
+        padding: 11px 12px;
+      }
+
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        min-width: 0;
+        margin: 2px 8px 8px 18px;
+        box-shadow: none;
+      }
+
+      .nav-dropdown-menu::before {
+        display: none;
+      }
+
+      .nav-dropdown-menu a {
+        padding: 11px 12px;
+      }
+
       .menu-button { display: inline-grid; place-items: center; }
       .nav-links {
         position: absolute;
@@ -812,7 +923,25 @@
         <ul class="nav-links" id="site-navigation">
           <li><a href="#about">About</a></li>
           <li><a href="#capabilities">Capabilities</a></li>
-          <li><a href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">R3QBOT ↗</a></li>
+          <li class="nav-dropdown">
+            <details>
+              <summary>
+                Product
+                <span class="dropdown-arrow" aria-hidden="true">▾</span>
+              </summary>
+
+              <div class="nav-dropdown-menu">
+                <a
+                  href="https://r3plex-projects-solution.github.io/r3qbot-site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>R3QBOT</span>
+                  <span class="external-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </details>
+          </li>
           <li><a href="#workflow">Workflow</a></li>
           <li><a href="#roadmap">Roadmap</a></li>
           <li><a href="#founder">Founder</a></li>
@@ -916,28 +1045,6 @@
             <h3>Procurement & Project Support</h3>
             <p>Construction-domain support connecting quantity, cost, procurement and project information.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="r3qbot" class="section">
-      <div class="container product-grid">
-        <div class="product-panel reveal">
-          <div class="product-mark">R3QBOT</div>
-          <p style="margin:0;color:#b4c1b7;font-size:1.04rem">Flagship product of R3PLEX Projects Solution</p>
-        </div>
-
-        <div class="product-copy reveal">
-          <div class="eyebrow">From drawings to trusted quantities</div>
-          <h2 class="section-title">A connected, reviewable and auditable quantity knowledge base.</h2>
-          <p>R3QBOT transforms construction drawings into a connected, reviewable and auditable quantity knowledge base. It links drawings, details, schedules, revisions, measurable elements, quantities, assumptions, deviations and professional decisions within one workspace.</p>
-
-          <div class="feature-list">
-            <div class="feature-row"><span class="feature-icon">1</span><div><strong>One-click Area</strong><span>For supported vector plans, one click should return one editable candidate or a structured refusal.</span></div></div>
-            <div class="feature-row"><span class="feature-icon">∑</span><div><strong>Deterministic calculation</strong><span>Approved geometry, confirmed scale and explicit rules produce repeatable quantities.</span></div></div>
-            <div class="feature-row"><span class="feature-icon">✓</span><div><strong>Professional approval</strong><span>AI suggestions remain draft until reviewed, corrected where needed and approved.</span></div></div>
-            <div class="feature-row"><span class="feature-icon">↗</span><div><strong>Audit-ready export</strong><span>Approved quantities retain source context and are prepared for structured Excel / CSV export.</span></div></div>
-          </div>
         </div>
       </div>
     </section>
