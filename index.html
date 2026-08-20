@@ -818,7 +818,19 @@
         padding: 11px 12px;
       }
 
-      .menu-button { display: inline-grid; place-items: center; }
+      /* Keep the mobile hamburger on the far right.
+         The nav wrapper is removed from the flex layout while its
+         dropdown list remains available as an absolutely positioned menu. */
+      .nav-wrap > nav {
+        display: contents;
+      }
+
+      .menu-button {
+        display: inline-grid;
+        place-items: center;
+        margin-left: auto;
+      }
+
       .nav-links {
         position: absolute;
         top: 78px;
