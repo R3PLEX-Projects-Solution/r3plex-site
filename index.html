@@ -1,909 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="theme-color"
-    content="#050805"
-  >
-
-  <meta
-    name="description"
-    content="R3PLEX Projects Solution is a Malaysia-based construction consultancy and technology venture developing R3QBOT, a drawing-first, reviewable and auditable quantity intelligence workspace."
-  >
-
-  <title>
-    R3PLEX Projects Solution | Construction Technology & R3QBOT
-  </title>
-
-  <meta
-    property="og:title"
-    content="R3PLEX Projects Solution | Construction Technology & R3QBOT"
-  >
-
-  <meta
-    property="og:description"
-    content="Building practical intelligence for construction. Explore R3QBOT, the R3PLEX flagship product for reviewable and auditable quantity take-off."
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050805">
+  <meta name="description" content="R3PLEX Projects Solution is a Malaysia-based construction consultancy and technology venture developing R3QBOT, a drawing-first, reviewable and auditable quantity intelligence workspace.">
+  <title>R3PLEX Projects Solution | Construction Technology & R3QBOT</title>
+  <meta property="og:title" content="R3PLEX Projects Solution | Construction Technology & R3QBOT">
+  <meta property="og:description" content="Building practical intelligence for construction. Explore R3QBOT, the R3PLEX flagship product for reviewable and auditable quantity take-off.">
+  <meta property="og:type" content="website">
 
   <style>
-
-    /* =========================================================
-       ROOT
-       ========================================================= */
-
     :root {
       --bg: #050805;
       --surface: #0b110d;
       --surface-2: #0f1812;
       --surface-3: #132018;
-
-      --green: #2ee523;
+      --green: #39e329;
       --green-soft: #8df77f;
-
       --text: #f5f7f5;
       --muted: #a8b2aa;
-
       --line: #223126;
-
       --white: #f7faf7;
       --dark-text: #0c120e;
-
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
       --radius: 22px;
-
       --max: 1180px;
     }
 
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
-
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-
       background: var(--bg);
-
       color: var(--text);
-
-      font-family:
-        Inter,
-        Arial,
-        Helvetica,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
-
-      overflow-x: hidden;
-
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-
-    a {
-      color: inherit;
-    }
-
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
 
     .container {
-      width: min(
-        var(--max),
-        calc(100% - 40px)
-      );
-
+      width: min(var(--max), calc(100% - 40px));
       margin-inline: auto;
     }
 
-
     .skip-link {
       position: fixed;
-
       left: 16px;
-      top: -70px;
-
+      top: -60px;
       z-index: 2000;
-
       padding: 10px 14px;
-
       background: var(--green);
       color: #041006;
-
       border-radius: 10px;
-
       font-weight: 800;
-
       text-decoration: none;
-
-      transition: top 0.2s ease;
+      transition: top .2s ease;
     }
-
-
-    .skip-link:focus {
-      top: 16px;
-    }
-
-
-    /* =========================================================
-       TYPOGRAPHY
-       ========================================================= */
+    .skip-link:focus { top: 16px; }
 
     .eyebrow {
       display: inline-flex;
-
       align-items: center;
-
       gap: 9px;
-
       color: var(--green-soft);
-
-      font-size: 0.78rem;
-
+      font-size: .78rem;
       font-weight: 800;
-
-      letter-spacing: 0.14em;
-
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
-
-
     .eyebrow::before {
       content: "";
-
       width: 24px;
-      height: 2px;
-
+      height: 1px;
       background: var(--green);
     }
-
 
     .section {
       padding: 96px 0;
-
-      scroll-margin-top: 90px;
+      scroll-margin-top: 86px;
     }
-
-
     .section-light {
       background: var(--white);
-
       color: var(--dark-text);
     }
-
-
     .section-title {
-      max-width: 790px;
-
       margin: 14px 0 18px;
-
-      font-size: clamp(
-        2rem,
-        4vw,
-        3.5rem
-      );
-
+      max-width: 790px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
       line-height: 1.08;
-
-      letter-spacing: -0.04em;
+      letter-spacing: -.04em;
     }
-
-
     .section-lead {
       max-width: 760px;
-
       margin: 0;
-
       color: var(--muted);
-
       font-size: 1.08rem;
     }
+    .section-light .section-lead { color: #526057; }
 
-
-    .section-light .section-lead {
-      color: #526057;
-    }
-
-
-    /* =========================================================
-       HEADER
-       ========================================================= */
-
+    /* HEADER / NAVIGATION */
     .site-header {
       position: fixed;
-
       inset: 0 0 auto 0;
-
       z-index: 1000;
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.07);
-
-      background:
-        rgba(5,8,5,0.94);
-
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      background: rgba(5,8,5,.86);
       backdrop-filter: blur(18px);
     }
-
-
     .nav-wrap {
-      min-height: 74px;
-
+      min-height: 78px;
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 24px;
     }
-
-
-    /* =========================================================
-       HEADER LOGO FIX
-       ========================================================= */
-
     .brand {
       display: inline-flex;
-
       align-items: center;
-
-      flex: 0 0 auto;
-
       text-decoration: none;
+      flex: 0 0 auto;
     }
-
-
     .brand-logo-plate {
       display: flex;
-
       align-items: center;
-
       justify-content: flex-start;
-
       width: auto;
       height: auto;
-
       padding: 0;
-
       background: transparent;
-
       border: none;
-
       border-radius: 0;
-
       overflow: visible;
     }
-
-
     .brand-logo {
-      display: block;
-
       width: auto;
-
       height: 54px;
-
       max-width: 190px;
-
       object-fit: contain;
+      display: block;
     }
-
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
 
     .nav-links {
       display: flex;
-
       align-items: center;
-
       gap: 22px;
-
       list-style: none;
-
       margin: 0;
-
       padding: 0;
     }
-
-
     .nav-links a {
-      color: #c7d0c9;
-
-      font-size: 0.92rem;
-
-      font-weight: 700;
-
       text-decoration: none;
-
-      transition:
-        color 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+      color: #c7d0c9;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
     }
-
-
     .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: #ffffff;
-    }
-
+    .nav-links a:focus-visible { color: #fff; }
 
     .nav-cta {
       padding: 10px 16px;
-
       border: 1px solid var(--green);
-
       border-radius: 999px;
-
       color: var(--green-soft) !important;
     }
-
-
     .nav-cta:hover,
     .nav-cta:focus-visible {
       background: var(--green);
-
       color: #061008 !important;
     }
 
-
     .menu-button {
       display: none;
-
       width: 44px;
       height: 44px;
-
       border-radius: 12px;
-
       border: 1px solid var(--line);
-
       background: var(--surface);
-
-      color: #ffffff;
-
+      color: #fff;
       cursor: pointer;
-
       font-size: 1.2rem;
     }
 
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
+    /* HERO */
     .hero {
       min-height: 820px;
-
       display: grid;
-
       align-items: center;
-
       padding: 138px 0 84px;
-
       position: relative;
-
       overflow: hidden;
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-
-
     .hero::before {
       content: "";
-
       position: absolute;
-
       inset: 0;
-
       background-image:
-
-        linear-gradient(
-          rgba(57,227,41,0.055) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(57,227,41,0.055) 1px,
-          transparent 1px
-        );
-
+        linear-gradient(rgba(57,227,41,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,227,41,.055) 1px, transparent 1px);
       background-size: 56px 56px;
-
-      mask-image:
-        linear-gradient(
-          to bottom,
-          black,
-          transparent 83%
-        );
-
+      mask-image: linear-gradient(to bottom, black, transparent 83%);
       pointer-events: none;
     }
-
-
     .hero::after {
       content: "";
-
       position: absolute;
-
       width: 620px;
       height: 620px;
-
       right: -230px;
       top: -220px;
-
       border-radius: 50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(57,227,41,0.13),
-          transparent 68%
-        );
-
+      background: radial-gradient(circle, rgba(57,227,41,.13), transparent 68%);
       filter: blur(12px);
-
       pointer-events: none;
     }
-
-
     .hero-grid {
       position: relative;
-
       z-index: 1;
-
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.12fr)
-        minmax(0, 0.88fr);
-
+      grid-template-columns: 1.12fr .88fr;
       gap: 68px;
-
       align-items: center;
     }
-
-
-    .hero-grid > * {
-      min-width: 0;
-    }
-
-
     .hero h1 {
-      max-width: 780px;
-
       margin: 18px 0 20px;
-
-      font-size:
-        clamp(
-          3.1rem,
-          7vw,
-          6.8rem
-        );
-
-      line-height: 0.94;
-
-      letter-spacing: -0.065em;
-
-      overflow-wrap: anywhere;
+      max-width: 780px;
+      font-size: clamp(3.1rem, 7vw, 6.8rem);
+      line-height: .94;
+      letter-spacing: -.065em;
     }
-
-
     .hero h1 em {
       display: block;
-
-      color: var(--green);
-
       font-style: normal;
+      color: var(--green);
     }
-
-
     .hero-copy {
       max-width: 660px;
-
       color: #c0cac2;
-
-      font-size:
-        clamp(
-          1.05rem,
-          1.9vw,
-          1.26rem
-        );
+      font-size: clamp(1.05rem, 1.9vw, 1.26rem);
     }
-
-
     .hero-actions {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 12px;
-
       margin-top: 34px;
     }
-
-
     .button {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 10px;
-
       min-height: 52px;
-
       padding: 0 22px;
-
       border-radius: 999px;
-
       border: 1px solid transparent;
-
       font-weight: 850;
-
       text-decoration: none;
-
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
-
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-
-    .button-primary {
-      background: var(--green);
-
-      color: #061008;
-    }
-
-
-    .button-secondary {
-      border-color: #415347;
-
-      background:
-        rgba(255,255,255,0.025);
-
-      color: #ffffff;
-    }
-
-
-    .button-secondary:hover {
-      border-color: var(--green);
-    }
-
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--green); color: #061008; }
+    .button-secondary { border-color: #415347; background: rgba(255,255,255,.025); color: #fff; }
+    .button-secondary:hover { border-color: var(--green); }
 
     .hero-note {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 10px 22px;
-
       margin-top: 34px;
-
       color: #7f9184;
-
-      font-size: 0.82rem;
+      font-size: .82rem;
     }
-
-
     .hero-note span::before {
       content: "•";
-
       color: var(--green);
-
       margin-right: 8px;
     }
 
-
-    /* =========================================================
-       HERO DRAWING VISUAL
-       ========================================================= */
-
     .hero-visual {
-      min-width: 0;
-
       min-height: 510px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
     }
-
-
     .drawing-card {
       width: min(100%, 470px);
-
       min-height: 500px;
-
-      padding: 26px;
-
-      position: relative;
-
-      overflow: hidden;
-
       border: 1px solid #253c2c;
-
-      border-radius: 28px;
-
       background:
-
-        linear-gradient(
-          rgba(57,227,41,0.055) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(57,227,41,0.055) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          180deg,
-          #09110b,
-          #071009
-        );
-
-      background-size:
-        40px 40px,
-        40px 40px,
-        auto;
-
+        linear-gradient(rgba(57,227,41,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,227,41,.055) 1px, transparent 1px),
+        linear-gradient(180deg, #09110b, #071009);
+      background-size: 40px 40px, 40px 40px, auto;
+      border-radius: 28px;
       box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
     }
-
-
     .drawing-top {
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
-      gap: 20px;
-
       color: #7d9182;
-
-      font-size: 0.75rem;
-
-      letter-spacing: 0.08em;
-
+      font-size: .75rem;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
-
-
     .drawing-dot {
-      flex: 0 0 auto;
-
       width: 9px;
       height: 9px;
-
       background: var(--green);
-
       border-radius: 50%;
-
-      box-shadow:
-        0 0 0 7px
-        rgba(57,227,41,0.11);
+      box-shadow: 0 0 0 7px rgba(57,227,41,.11);
     }
-
-
     .room-plan {
       width: 78%;
-
       aspect-ratio: 1.2;
-
       margin: 72px auto 38px;
-
       border: 3px solid #4f6656;
-
       position: relative;
-
-      background:
-        rgba(57,227,41,0.045);
+      background: rgba(57,227,41,.045);
     }
-
-
     .room-plan::before {
       content: "";
-
       position: absolute;
-
       left: -3px;
       right: -3px;
-
       top: 50%;
-
-      border-top:
-        3px solid #4f6656;
+      border-top: 3px solid #4f6656;
     }
-
-
     .room-plan::after {
       content: "";
-
       position: absolute;
-
-      inset:
-        12% 16% 18% 14%;
-
-      border:
-        2px solid var(--green);
-
-      background:
-        rgba(57,227,41,0.18);
-
-      box-shadow:
-        0 0 34px
-        rgba(57,227,41,0.16)
-        inset;
+      inset: 12% 16% 18% 14%;
+      border: 2px solid var(--green);
+      background: rgba(57,227,41,.18);
+      box-shadow: 0 0 34px rgba(57,227,41,.16) inset;
     }
-
-
     .room-label {
       position: absolute;
-
       left: 50%;
       top: 48%;
-
-      transform:
-        translate(-50%, -50%);
-
+      transform: translate(-50%,-50%);
       z-index: 2;
-
       padding: 5px 8px;
-
       color: var(--green-soft);
-
       background: #081008;
-
       border: 1px solid #2d5535;
-
       border-radius: 6px;
-
-      font-size: 0.72rem;
-
+      font-size: .72rem;
       font-weight: 800;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
-
-
     .one-click {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr)
-        auto;
-
+      grid-template-columns: 1fr auto;
       gap: 12px;
-
       align-items: center;
-
       padding: 16px;
-
-      border:
-        1px solid #284a30;
-
-      background:
-        rgba(8,16,10,0.86);
-
+      border: 1px solid #284a30;
+      background: rgba(8,16,10,.86);
       border-radius: 16px;
     }
-
-
-    .one-click > div {
-      min-width: 0;
-    }
-
-
-    .one-click strong {
-      display: block;
-
-      font-size: 1.02rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .one-click span {
-      color: #829287;
-
-      font-size: 0.78rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
+    .one-click strong { display: block; font-size: 1.02rem; }
+    .one-click span { color: #829287; font-size: .78rem; }
     .measure-pill {
       padding: 8px 10px;
-
       border-radius: 999px;
-
-      background:
-        rgba(57,227,41,0.12);
-
-      color:
-        var(--green-soft) !important;
-
-      border:
-        1px solid
-        rgba(57,227,41,0.22);
-
+      background: rgba(57,227,41,.12);
+      color: var(--green-soft) !important;
+      border: 1px solid rgba(57,227,41,.22);
       font-weight: 800;
-
-      white-space: nowrap;
     }
 
-
-    /* =========================================================
-       GENERIC TWO-COLUMN GRIDS
-       ========================================================= */
-
+    /* GENERIC GRIDS */
     .about-grid,
     .product-grid,
     .founder-grid,
     .contact-shell {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 56px;
-
       align-items: center;
     }
 
-
+    /* Prevent long content from forcing grid columns wider than the viewport. */
     .about-grid > *,
     .product-grid > *,
     .founder-grid > *,
@@ -911,2842 +400,724 @@
       min-width: 0;
     }
 
-
     .about-copy p,
     .product-copy p,
-    .founder-copy p {
-      color: #c0cac2;
-    }
-
-
-    .section-light
-    .about-copy p {
-      color: #526057;
-    }
-
-
-    /* =========================================================
-       STATUS CARD
-       ========================================================= */
+    .founder-copy p { color: #c0cac2; }
+    .section-light .about-copy p { color: #526057; }
 
     .status-card {
       padding: 28px;
-
       border-radius: var(--radius);
-
       border: 1px solid #d5ded7;
-
-      background: #ffffff;
-
-      box-shadow:
-        0 16px 50px
-        rgba(16,32,21,0.08);
+      background: #fff;
+      box-shadow: 0 16px 50px rgba(16,32,21,.08);
     }
-
-
     .status-card .label {
       color: #698071;
-
-      font-size: 0.76rem;
-
+      font-size: .76rem;
       font-weight: 800;
-
-      letter-spacing: 0.1em;
-
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
-
-
     .status-card h3 {
       margin: 8px 0 12px;
-
       font-size: 1.6rem;
-
-      overflow-wrap: anywhere;
     }
-
-
-    .status-card p {
-      margin-bottom: 0;
-
-      color: #526057;
-    }
-
-
+    .status-card p { color: #526057; margin-bottom: 0; }
     .status-track {
       display: grid;
-
-      grid-template-columns:
-        repeat(4, minmax(0,1fr));
-
+      grid-template-columns: repeat(4,1fr);
       gap: 10px;
-
       margin-top: 26px;
     }
-
-
     .status-node {
-      min-width: 0;
-
       padding-top: 14px;
-
-      border-top:
-        3px solid #d8e0da;
-
+      border-top: 3px solid #d8e0da;
       color: #6c766f;
-
-      font-size: 0.72rem;
-
+      font-size: .72rem;
       font-weight: 800;
-
       text-transform: uppercase;
-
-      overflow-wrap: anywhere;
     }
-
-
-    .status-node.done {
-      border-color: #54c64d;
-
-      color: #267b28;
-    }
-
-
-    .status-node.current {
-      border-color: #139f21;
-
-      color: #0d6519;
-    }
-
-
-    /* =========================================================
-       CAPABILITIES
-       ========================================================= */
+    .status-node.done { border-color: #54c64d; color: #267b28; }
+    .status-node.current { border-color: #139f21; color: #0d6519; }
 
     .capability-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(
-          4,
-          minmax(0,1fr)
-        );
-
+      grid-template-columns: repeat(4,1fr);
       gap: 16px;
-
       margin-top: 44px;
     }
-
-
     .capability-card {
-      min-width: 0;
-
       min-height: 230px;
-
       padding: 24px;
-
       border-radius: 18px;
-
-      border:
-        1px solid var(--line);
-
+      border: 1px solid var(--line);
       background: var(--surface);
     }
-
-
     .capability-no {
       color: var(--green);
-
-      font-size: 0.74rem;
-
+      font-size: .74rem;
       font-weight: 900;
-
-      letter-spacing: 0.12em;
+      letter-spacing: .12em;
     }
+    .capability-card h3 { margin: 54px 0 10px; font-size: 1.2rem; }
+    .capability-card p { margin: 0; color: #92a096; font-size: .94rem; }
 
-
-    .capability-card h3 {
-      margin: 54px 0 10px;
-
-      font-size: 1.2rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .capability-card p {
-      margin: 0;
-
-      color: #92a096;
-
-      font-size: 0.94rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    /* =========================================================
-       R3QBOT
-       ========================================================= */
-
+    /* R3QBOT */
     .product-panel {
-      min-width: 0;
-
       padding: 36px;
-
       border-radius: 26px;
-
-      border:
-        1px solid #2a4831;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(57,227,41,0.08),
-          rgba(57,227,41,0.015)
-        );
+      border: 1px solid #2a4831;
+      background: linear-gradient(145deg, rgba(57,227,41,.08), rgba(57,227,41,.015));
     }
-
-
     .product-mark {
-      margin-bottom: 22px;
-
       color: var(--green);
-
       font-weight: 950;
-
-      font-size:
-        clamp(
-          2.8rem,
-          5vw,
-          5rem
-        );
-
-      letter-spacing: -0.06em;
-
+      font-size: clamp(2.8rem,5vw,5rem);
+      letter-spacing: -.06em;
       line-height: 1;
+      margin-bottom: 22px;
     }
-
-
-    .product-copy {
-      min-width: 0;
-    }
-
-
-    .product-copy p {
-      overflow-wrap: anywhere;
-    }
-
-
     .feature-list {
       display: grid;
-
       gap: 12px;
-
       margin-top: 30px;
     }
-
-
     .feature-row {
-      min-width: 0;
-
       display: grid;
-
-      grid-template-columns:
-        42px
-        minmax(0,1fr);
-
+      grid-template-columns: 42px minmax(0, 1fr);
       gap: 14px;
-
       padding: 15px;
-
       border-radius: 15px;
-
-      background:
-        rgba(255,255,255,0.025);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.06);
+      background: rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.06);
     }
-
-
+    .feature-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(57,227,41,.12);
+      color: var(--green-soft);
+      font-weight: 900;
+    }
     .feature-row > div {
       min-width: 0;
     }
 
-
-    .feature-icon {
-      width: 42px;
-      height: 42px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 12px;
-
-      background:
-        rgba(57,227,41,0.12);
-
-      color: var(--green-soft);
-
-      font-weight: 900;
-    }
-
-
-    .feature-row strong {
-      display: block;
-
-      overflow-wrap: anywhere;
-
-      word-break: normal;
-    }
-
-
+    .feature-row strong,
     .feature-row div span {
-      display: block;
-
-      color: #8e9d92;
-
-      font-size: 0.84rem;
-
       overflow-wrap: anywhere;
-
       word-break: normal;
     }
 
+    .feature-row strong { display: block; }
+    .feature-row div span { display: block; color: #8e9d92; font-size: .84rem; }
 
-    /* =========================================================
-       WORKFLOW
-       ========================================================= */
-
+    /* WORKFLOW */
     .workflow-list {
       display: grid;
-
-      grid-template-columns:
-        repeat(
-          6,
-          minmax(0,1fr)
-        );
-
+      grid-template-columns: repeat(6,1fr);
       gap: 10px;
-
       margin-top: 46px;
     }
-
-
     .workflow-step {
-      min-width: 0;
-
       min-height: 240px;
-
       padding: 20px;
-
       background: var(--surface);
-
-      border:
-        1px solid var(--line);
-
+      border: 1px solid var(--line);
       border-radius: 17px;
     }
-
-
     .workflow-no {
       color: var(--green);
-
-      font-size: 0.7rem;
-
+      font-size: .7rem;
       font-weight: 900;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
-
-
-    .workflow-step h3 {
-      margin: 72px 0 10px;
-
-      font-size: 1rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .workflow-step p {
-      margin: 0;
-
-      color: #87978b;
-
-      font-size: 0.82rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
+    .workflow-step h3 { margin: 72px 0 10px; font-size: 1rem; }
+    .workflow-step p { margin: 0; color: #87978b; font-size: .82rem; }
     .workflow-principle {
       margin-top: 26px;
-
       padding: 18px 20px;
-
-      border-left:
-        3px solid var(--green);
-
-      background:
-        rgba(57,227,41,0.06);
-
+      border-left: 3px solid var(--green);
+      background: rgba(57,227,41,.06);
       color: #c9d2cb;
     }
 
-
-    /* =========================================================
-       ROADMAP
-       ========================================================= */
-
+    /* ROADMAP */
     .roadmap-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          minmax(0,1fr)
-        );
-
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
-
       margin-top: 44px;
     }
-
-
     .roadmap-card {
-      min-width: 0;
-
       padding: 26px;
-
       border-radius: 20px;
-
-      border:
-        1px solid #d9e1db;
-
-      background: #ffffff;
+      border: 1px solid #d9e1db;
+      background: #fff;
     }
-
-
-    .roadmap-card.active {
-      border-color: #48c847;
-
-      box-shadow:
-        0 20px 50px
-        rgba(25,115,38,0.08);
-    }
-
-
+    .roadmap-card.active { border-color: #48c847; box-shadow: 0 20px 50px rgba(25,115,38,.08); }
     .roadmap-tag {
       display: inline-block;
-
       padding: 6px 9px;
-
       border-radius: 999px;
-
       background: #eef5ef;
-
       color: #4b6150;
-
-      font-size: 0.7rem;
-
+      font-size: .7rem;
       font-weight: 900;
-
       text-transform: uppercase;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
-
-
-    .roadmap-card.active
-    .roadmap-tag {
-      background: #dff8dc;
-
-      color: #16751d;
-    }
-
-
-    .roadmap-card h3 {
-      margin: 22px 0 8px;
-
-      font-size: 1.6rem;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .roadmap-card p {
-      color: #59685e;
-    }
-
-
-    .roadmap-card ul {
-      padding-left: 18px;
-
-      color: #344038;
-    }
-
-
-    .roadmap-card li {
-      margin-bottom: 7px;
-    }
-
-
+    .roadmap-card.active .roadmap-tag { background: #dff8dc; color: #16751d; }
+    .roadmap-card h3 { margin: 22px 0 8px; font-size: 1.6rem; }
+    .roadmap-card p { color: #59685e; }
+    .roadmap-card ul { padding-left: 18px; color: #344038; }
+    .roadmap-card li { margin-bottom: 7px; }
     .roadmap-boundary {
       margin-top: 24px;
-
       color: #5d6a61;
-
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
 
-
-    /* =========================================================
-       FOUNDER
-       ========================================================= */
-
+    /* FOUNDER */
     .founder-card {
       min-height: 430px;
-
       display: grid;
-
       place-items: center;
-
-      border:
-        1px solid #28432f;
-
+      border: 1px solid #28432f;
       border-radius: 26px;
-
       background:
-
-        radial-gradient(
-          circle at 50% 42%,
-          rgba(57,227,41,0.13),
-          transparent 35%
-        ),
-
-        linear-gradient(
-          rgba(57,227,41,0.04) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(57,227,41,0.04) 1px,
-          transparent 1px
-        ),
-
+        radial-gradient(circle at 50% 42%, rgba(57,227,41,.13), transparent 35%),
+        linear-gradient(rgba(57,227,41,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57,227,41,.04) 1px, transparent 1px),
         var(--surface);
-
-      background-size:
-        auto,
-        34px 34px,
-        34px 34px,
-        auto;
+      background-size: auto, 34px 34px, 34px 34px, auto;
     }
-
-
     .founder-monogram {
       width: 160px;
       height: 160px;
-
       display: grid;
-
       place-items: center;
-
       border-radius: 50%;
-
-      border:
-        1px solid
-        rgba(57,227,41,0.35);
-
-      background:
-        rgba(57,227,41,0.08);
-
+      border: 1px solid rgba(57,227,41,.35);
+      background: rgba(57,227,41,.08);
       color: var(--green-soft);
-
       font-size: 3rem;
-
       font-weight: 950;
-
-      letter-spacing: -0.05em;
+      letter-spacing: -.05em;
     }
-
-
     .founder-copy h2 {
       margin: 10px 0 2px;
-
-      font-size:
-        clamp(
-          2.3rem,
-          4vw,
-          4rem
-        );
-
-      letter-spacing: -0.05em;
+      font-size: clamp(2.3rem,4vw,4rem);
+      letter-spacing: -.05em;
     }
+    .founder-role { color: var(--green-soft); font-weight: 800; margin-bottom: 22px; }
+    .founder-list { padding-left: 18px; color: #c6d0c8; }
+    .founder-list li { margin-bottom: 10px; }
 
-
-    .founder-role {
-      margin-bottom: 22px;
-
-      color: var(--green-soft);
-
-      font-weight: 800;
-    }
-
-
-    .founder-list {
-      padding-left: 18px;
-
-      color: #c6d0c8;
-    }
-
-
-    .founder-list li {
-      margin-bottom: 10px;
-    }
-
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
+    /* CONTACT */
     .contact-shell {
       padding: 44px;
-
       border-radius: 28px;
-
-      border:
-        1px solid #2a4831;
-
-      background:
-        linear-gradient(
-          145deg,
-          #0c150f,
-          #081009
-        );
+      border: 1px solid #2a4831;
+      background: linear-gradient(145deg, #0c150f, #081009);
     }
-
-
     .contact-shell h2 {
-      max-width: 650px;
-
       margin: 12px 0 14px;
-
-      font-size:
-        clamp(
-          2.4rem,
-          5vw,
-          4.8rem
-        );
-
-      line-height: 0.98;
-
-      letter-spacing: -0.055em;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .contact-shell p {
       max-width: 650px;
-
-      color: #9eaca1;
+      font-size: clamp(2.4rem,5vw,4.8rem);
+      line-height: .98;
+      letter-spacing: -.055em;
     }
-
-
+    .contact-shell p { color: #9eaca1; max-width: 650px; }
     .contact-card {
-      min-width: 0;
-
       padding: 26px;
-
       border-radius: 18px;
-
-      background:
-        rgba(255,255,255,0.035);
-
-      border:
-        1px solid
-        rgba(255,255,255,0.07);
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
     }
-
-
     .contact-card .label {
       margin-top: 6px;
-
       color: #718078;
-
-      font-size: 0.72rem;
-
+      font-size: .72rem;
       font-weight: 900;
-
       text-transform: uppercase;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
+    .contact-card a { color: var(--green-soft); font-weight: 800; text-decoration: none; }
+    .contact-card .location { margin-top: 4px; color: #d3dbd5; }
 
-
-    .contact-card a {
-      color: var(--green-soft);
-
-      font-weight: 800;
-
-      text-decoration: none;
-
-      overflow-wrap: anywhere;
-    }
-
-
-    .contact-card .location {
-      margin-top: 4px;
-
-      color: #d3dbd5;
-    }
-
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
+    /* FOOTER */
     .footer {
-      padding: 36px 0;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.07);
-
+      padding: 34px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
       color: #87968b;
-
-      font-size: 0.82rem;
+      font-size: .82rem;
     }
-
-
     .footer-row {
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
       gap: 24px;
     }
-
-
     .footer-brand {
       display: flex;
-
       align-items: center;
-
-      gap: 16px;
-
-      min-width: 0;
+      gap: 14px;
     }
-
-
-    /* =========================================================
-       FOOTER LOGO FIX
-       ========================================================= */
-
     .footer-logo-plate {
-      flex: 0 0 auto;
-
       display: flex;
-
       align-items: center;
-
       justify-content: flex-start;
-
       width: auto;
       height: auto;
-
       padding: 0;
-
       background: transparent;
-
       border: none;
-
       border-radius: 0;
     }
-
-
     .footer-logo {
-      display: block;
-
       width: auto;
-
       height: 46px;
-
       max-width: 150px;
-
       object-fit: contain;
+      display: block;
     }
 
-
-    .footer-brand-text {
-      max-width: 430px;
-
-      color: #95a398;
-    }
-
-
-    /* =========================================================
-       REVEAL
-       ========================================================= */
-
+    /* REVEAL */
     .reveal {
       opacity: 0;
-
-      transform:
-        translateY(18px);
-
-      transition:
-        opacity 0.55s ease,
-        transform 0.55s ease;
+      transform: translateY(18px);
+      transition: opacity .55s ease, transform .55s ease;
     }
-
-
     .reveal.visible {
       opacity: 1;
-
-      transform:
-        translateY(0);
+      transform: translateY(0);
     }
 
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media
-    (max-width: 1060px) {
-
-      .nav-links {
-        gap: 14px;
-      }
-
-
-      .nav-links a {
-        font-size: 0.84rem;
-      }
-
-
-      .capability-grid {
-        grid-template-columns:
-          repeat(
-            2,
-            minmax(0,1fr)
-          );
-      }
-
-
-      .workflow-list {
-        grid-template-columns:
-          repeat(
-            3,
-            minmax(0,1fr)
-          );
-      }
-
+    /* RESPONSIVE */
+    @media (max-width: 1060px) {
+      .nav-links { gap: 14px; }
+      .nav-links a { font-size: .84rem; }
+      .capability-grid { grid-template-columns: repeat(2,1fr); }
+      .workflow-list { grid-template-columns: repeat(3,1fr); }
     }
 
-
-    @media
-    (max-width: 860px) {
-
-      .brand-logo {
-        height: 48px;
-
-        max-width: 165px;
-      }
-
-
-      .menu-button {
-        display: inline-grid;
-
-        place-items: center;
-      }
-
-
+    @media (max-width: 860px) {
+      .brand-logo { height: 48px; max-width: 165px; }
+      .menu-button { display: inline-grid; place-items: center; }
       .nav-links {
         position: absolute;
-
-        top: 74px;
-
+        top: 78px;
         left: 20px;
         right: 20px;
-
         display: none;
-
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 4px;
-
         padding: 14px;
-
-        border:
-          1px solid var(--line);
-
+        border: 1px solid var(--line);
         border-radius: 16px;
-
         background: #09100b;
-
         box-shadow: var(--shadow);
       }
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: 11px 12px; }
+      .nav-cta { text-align: center; margin-top: 5px; }
 
-
-      .nav-links.open {
-        display: flex;
-      }
-
-
-      .nav-links a {
-        display: block;
-
-        padding: 11px 12px;
-      }
-
-
-      .nav-cta {
-        margin-top: 5px;
-
-        text-align: center;
-      }
-
-
-      .hero {
-        min-height: auto;
-
-        padding-top: 126px;
-      }
-
-
+      .hero { min-height: auto; padding-top: 126px; }
       .hero-grid,
       .about-grid,
       .product-grid,
       .founder-grid,
-      .contact-shell {
-        grid-template-columns:
-          minmax(0,1fr);
-      }
-
-
-      .hero-grid {
-        gap: 26px;
-      }
-
-
-      .hero-visual {
-        min-height: 430px;
-      }
-
-
-      .drawing-card {
-        min-height: 430px;
-      }
-
-
-      .room-plan {
-        margin-top: 52px;
-      }
-
-
-      .roadmap-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .contact-shell {
-        padding: 30px;
-      }
-
+      .contact-shell { grid-template-columns: minmax(0, 1fr); }
+      .hero-grid { gap: 26px; }
+      .hero-visual { min-height: 430px; }
+      .drawing-card { min-height: 430px; }
+      .room-plan { margin-top: 52px; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .contact-shell { padding: 30px; }
     }
 
-
-    @media
-    (max-width: 620px) {
-
-      .container {
-        width:
-          min(
-            var(--max),
-            calc(100% - 26px)
-          );
-      }
-
-
-      .section {
-        padding: 74px 0;
-      }
-
-
-      .nav-wrap {
-        min-height: 68px;
-      }
-
-
-      .brand-logo {
-        height: 42px;
-
-        max-width: 145px;
-      }
-
-
-      .nav-links {
-        top: 68px;
-
-        left: 13px;
-        right: 13px;
-      }
-
-
-      .hero {
-        padding-top: 105px;
-      }
-
-
-      .hero h1 {
-        font-size:
-          clamp(
-            2.8rem,
-            14vw,
-            4.6rem
-          );
-      }
-
-
+    @media (max-width: 620px) {
+      .container { width: min(var(--max), calc(100% - 26px)); }
+      .section { padding: 74px 0; }
+      .nav-wrap { min-height: 72px; }
+      .nav-links { top: 72px; left: 13px; right: 13px; }
+      .hero { padding-top: 112px; }
+      .hero h1 { font-size: clamp(2.9rem,15vw,5rem); }
       .capability-grid,
-      .workflow-list {
-        grid-template-columns:
-          minmax(0,1fr);
-      }
-
-
-      .workflow-step {
-        min-height: 190px;
-      }
-
-
-      .workflow-step h3 {
-        margin-top: 48px;
-      }
-
-
-      .status-track {
-        grid-template-columns:
-          minmax(0,1fr)
-          minmax(0,1fr);
-      }
-
-
-      .one-click {
-        grid-template-columns:
-          minmax(0,1fr);
-      }
-
-
-      .measure-pill {
-        justify-self: start;
-      }
-
-
-      .footer-row {
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-
-
-      .footer-logo {
-        height: 40px;
-
-        max-width: 130px;
-      }
-
-
-      .footer-brand {
-        align-items: center;
-
-        flex-wrap: wrap;
-      }
-
+      .workflow-list { grid-template-columns: 1fr; }
+      .workflow-step { min-height: 190px; }
+      .workflow-step h3 { margin-top: 48px; }
+      .status-track { grid-template-columns: 1fr 1fr; }
+      .footer-row { flex-direction: column; align-items: flex-start; }
+      .brand-logo { height: 42px; max-width: 145px; }
+      .footer-logo { height: 40px; max-width: 130px; }
     }
 
+    @media (max-width: 420px) {
 
-    @media
-    (max-width: 420px) {
+      .product-panel {
+        padding: 24px;
+      }
 
       .feature-row {
-        grid-template-columns:
-          minmax(0,1fr);
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 14px;
       }
-
 
       .feature-icon {
         width: 38px;
         height: 38px;
       }
 
-
-      .brand-logo {
-        height: 38px;
-
-        max-width: 130px;
+      .feature-row strong {
+        font-size: .98rem;
       }
 
-
-      .footer-logo {
-        height: 36px;
-
-        max-width: 120px;
+      .feature-row div span {
+        font-size: .82rem;
+        line-height: 1.5;
       }
-
     }
 
-
-    @media
-    (prefers-reduced-motion: reduce) {
-
-      html {
-        scroll-behavior: auto;
-      }
-
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-
-        transition: none !important;
-      }
-
-
-      .reveal {
-        opacity: 1;
-
-        transform: none;
-      }
-
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .reveal { opacity: 1; transform: none; }
     }
-
   </style>
-
 </head>
 
-
 <body>
-
-
-  <a
-    class="skip-link"
-    href="#main"
-  >
-    Skip to content
-  </a>
-
-
-  <!-- =======================================================
-       HEADER
-       ======================================================= -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-
     <div class="container nav-wrap">
-
-
-      <a
-        class="brand"
-        href="#home"
-        aria-label="R3PLEX Projects Solution home"
-      >
-
+      <a class="brand" href="#home" aria-label="R3PLEX Projects Solution home">
         <span class="brand-logo-plate">
-
-          <img
-            class="brand-logo"
-            src="R3PLEX.png"
-            alt="R3PLEX Projects Solution logo"
-          >
-
+          <img class="brand-logo" src="R3PLEX.png" alt="R3PLEX Projects Solution logo">
         </span>
-
       </a>
 
-
-      <button
-        class="menu-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-navigation"
-        aria-label="Open navigation menu"
-      >
-
-        <span aria-hidden="true">
-          ☰
-        </span>
-
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+        <span aria-hidden="true">☰</span>
       </button>
 
-
-      <nav
-        aria-label="Primary navigation"
-      >
-
-        <ul
-          class="nav-links"
-          id="site-navigation"
-        >
-
-          <li>
-            <a href="#about">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#capabilities">
-              Capabilities
-            </a>
-          </li>
-
-          <li>
-            <a href="#r3qbot">
-              R3QBOT
-            </a>
-          </li>
-
-          <li>
-            <a href="#workflow">
-              Workflow
-            </a>
-          </li>
-
-          <li>
-            <a href="#roadmap">
-              Roadmap
-            </a>
-          </li>
-
-          <li>
-            <a href="#founder">
-              Founder
-            </a>
-          </li>
-
-          <li>
-
-            <a
-              class="nav-cta"
-              href="#contact"
-            >
-              Request a Pilot
-            </a>
-
-          </li>
-
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="site-navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">R3QBOT ↗</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#founder">Founder</a></li>
+          <li><a class="nav-cta" href="#contact">Request a Pilot</a></li>
         </ul>
-
       </nav>
-
     </div>
-
   </header>
 
-
-  <!-- =======================================================
-       MAIN
-       ======================================================= -->
-
   <main id="main">
-
-
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <section
-      id="home"
-      class="hero"
-    >
-
+    <section id="home" class="hero">
       <div class="container hero-grid">
-
-
         <div class="reveal">
-
-          <div class="eyebrow">
-
-            R3PLEX Projects Solution
-
-          </div>
-
-
-          <h1>
-
-            Building practical
-
-            <em>
-              intelligence for construction.
-            </em>
-
-          </h1>
-
-
-          <p class="hero-copy">
-
-            Quantity surveying,
-            construction technology and
-            drawing intelligence designed
-            around professional control.
-
-          </p>
-
+          <div class="eyebrow">R3PLEX Projects Solution</div>
+          <h1>Building practical <em>intelligence for construction.</em></h1>
+          <p class="hero-copy">Quantity surveying, construction technology and drawing intelligence designed around professional control.</p>
 
           <div class="hero-actions">
-
-            <a
-              class="button button-primary"
-              href="#r3qbot"
-            >
-
-              Explore R3QBOT
-
-            </a>
-
-
-            <a
-              class="button button-secondary"
-              href="#contact"
-            >
-
-              Request a Pilot
-
-            </a>
-
+            <a class="button button-primary" href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">Open R3QBOT Site ↗</a>
+            <a class="button button-secondary" href="#contact">Request a Pilot</a>
           </div>
 
-
-          <div
-            class="hero-note"
-            aria-label="Company positioning"
-          >
-
-            <span>
-              Malaysia-based
-            </span>
-
-            <span>
-              Construction technology
-            </span>
-
-            <span>
-              Quantity surveying
-            </span>
-
-            <span>
-              Human-reviewed AI
-            </span>
-
+          <div class="hero-note" aria-label="Company positioning">
+            <span>Malaysia-based</span>
+            <span>Construction technology</span>
+            <span>Quantity surveying</span>
+            <span>Human-reviewed AI</span>
           </div>
-
         </div>
 
-
-        <div
-          class="hero-visual reveal"
-          aria-label="Conceptual R3QBOT One-click Area visual"
-        >
-
+        <div class="hero-visual reveal" aria-label="Conceptual R3QBOT One-click Area visual">
           <div class="drawing-card">
-
-
             <div class="drawing-top">
-
-              <span>
-                R3QBOT / Drawing workspace
-              </span>
-
-              <span
-                class="drawing-dot"
-                aria-hidden="true"
-              >
-              </span>
-
+              <span>R3QBOT / Drawing workspace</span>
+              <span class="drawing-dot" aria-hidden="true"></span>
             </div>
-
 
             <div class="room-plan">
-
-              <span class="room-label">
-                REVIEWABLE AREA
-              </span>
-
+              <span class="room-label">REVIEWABLE AREA</span>
             </div>
-
 
             <div class="one-click">
-
               <div>
-
-                <strong>
-                  One-click Area
-                </strong>
-
-                <span>
-
-                  Candidate geometry →
-                  review →
-                  deterministic quantity
-
-                </span>
-
+                <strong>One-click Area</strong>
+                <span>Candidate geometry → review → deterministic quantity</span>
               </div>
-
-
-              <span class="measure-pill">
-                QS REVIEW
-              </span>
-
+              <span class="measure-pill">QS REVIEW</span>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
-
-    <section
-      id="about"
-      class="section section-light"
-    >
-
+    <section id="about" class="section section-light">
       <div class="container about-grid">
-
-
         <div class="about-copy reveal">
-
-          <div
-            class="eyebrow"
-            style="color:#238f26"
-          >
-
-            About R3PLEX
-
-          </div>
-
-
-          <h2 class="section-title">
-
-            Construction-domain knowledge,
-            translated into practical digital tools.
-
-          </h2>
-
-
-          <p>
-
-            R3PLEX Projects Solution is a
-            Malaysia-based construction consultancy
-            and technology venture focused on
-            quantity surveying, cost management,
-            procurement support, project coordination,
-            digital reporting, construction
-            documentation and practical construction
-            technology.
-
-          </p>
-
-
-          <p>
-
-            Its flagship product, R3QBOT, is being
-            developed as an AI-assisted quantity
-            take-off and drawing-intelligence platform
-            with professional review and auditability
-            at the centre of the workflow.
-
-          </p>
-
+          <div class="eyebrow" style="color:#238f26">About R3PLEX</div>
+          <h2 class="section-title">Construction-domain knowledge, translated into practical digital tools.</h2>
+          <p>R3PLEX Projects Solution is a Malaysia-based construction consultancy and technology venture focused on quantity surveying, cost management, procurement support, project coordination, digital reporting, construction documentation and practical construction technology.</p>
+          <p>Its flagship product, R3QBOT, is being developed as an AI-assisted quantity take-off and drawing-intelligence platform with professional review and auditability at the centre of the workflow.</p>
         </div>
-
 
         <aside class="status-card reveal">
-
-
-          <div class="label">
-            Current product stage
+          <div class="label">Current product stage</div>
+          <h3>Founder-developed prototype in active MVP development</h3>
+          <p>R3PLEX separates prototype, MVP, pilot and production status. R3QBOT is not presented as production-ready or as an autonomous quantity authority.</p>
+          <div class="status-track" aria-label="R3QBOT product stages">
+            <div class="status-node done">Foundation</div>
+            <div class="status-node current">MVP</div>
+            <div class="status-node">Pilot</div>
+            <div class="status-node">Production</div>
           </div>
-
-
-          <h3>
-
-            Founder-developed prototype
-            in active MVP development
-
-          </h3>
-
-
-          <p>
-
-            R3PLEX separates prototype,
-            MVP, pilot and production status.
-
-            R3QBOT is not presented as
-            production-ready or as an
-            autonomous quantity authority.
-
-          </p>
-
-
-          <div
-            class="status-track"
-            aria-label="R3QBOT product stages"
-          >
-
-            <div class="status-node done">
-              Foundation
-            </div>
-
-            <div class="status-node current">
-              MVP
-            </div>
-
-            <div class="status-node">
-              Pilot
-            </div>
-
-            <div class="status-node">
-              Production
-            </div>
-
-          </div>
-
         </aside>
-
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         CAPABILITIES
-         ===================================================== -->
-
-    <section
-      id="capabilities"
-      class="section"
-    >
-
+    <section id="capabilities" class="section">
       <div class="container">
-
-
-        <div class="eyebrow">
-          What we do
-        </div>
-
-
-        <h2 class="section-title">
-
-          Focused capabilities around
-          construction information and
-          commercial workflows.
-
-        </h2>
-
-
-        <p class="section-lead">
-
-          R3PLEX remains deliberately focused.
-
-          Public positioning should reflect
-          demonstrated capability and controlled
-          product development rather than an
-          unvalidated catalogue of AI products.
-
-        </p>
-
+        <div class="eyebrow">What we do</div>
+        <h2 class="section-title">Focused capabilities around construction information and commercial workflows.</h2>
+        <p class="section-lead">R3PLEX remains deliberately focused. Public positioning should reflect demonstrated capability and controlled product development rather than an unvalidated catalogue of AI products.</p>
 
         <div class="capability-grid">
-
-
           <article class="capability-card reveal">
-
-            <div class="capability-no">
-              01 / QS
-            </div>
-
-            <h3>
-
-              Quantity Surveying &amp;
-              Cost Management
-
-            </h3>
-
-            <p>
-
-              Measurement, costing, tendering
-              and commercial workflow knowledge
-              grounded in construction practice.
-
-            </p>
-
+            <div class="capability-no">01 / QS</div>
+            <h3>Quantity Surveying & Cost Management</h3>
+            <p>Measurement, costing, tendering and commercial workflow knowledge grounded in construction practice.</p>
           </article>
-
-
           <article class="capability-card reveal">
-
-            <div class="capability-no">
-              02 / CONTECH
-            </div>
-
-            <h3>
-
-              Construction Technology
-
-            </h3>
-
-            <p>
-
-              Practical digital tools that reduce
-              repetitive work while keeping
-              professional review and accountability
-              visible.
-
-            </p>
-
+            <div class="capability-no">02 / CONTECH</div>
+            <h3>Construction Technology</h3>
+            <p>Practical digital tools that reduce repetitive work while keeping professional review and accountability visible.</p>
           </article>
-
-
           <article class="capability-card reveal">
-
-            <div class="capability-no">
-              03 / DATA
-            </div>
-
-            <h3>
-
-              Digital Project Information
-
-            </h3>
-
-            <p>
-
-              Better organisation of drawings,
-              quantities, revisions, decisions
-              and structured project records.
-
-            </p>
-
+            <div class="capability-no">03 / DATA</div>
+            <h3>Digital Project Information</h3>
+            <p>Better organisation of drawings, quantities, revisions, decisions and structured project records.</p>
           </article>
-
-
           <article class="capability-card reveal">
-
-            <div class="capability-no">
-              04 / DELIVERY
-            </div>
-
-            <h3>
-
-              Procurement &amp;
-              Project Support
-
-            </h3>
-
-            <p>
-
-              Construction-domain support connecting
-              quantity, cost, procurement and
-              project information.
-
-            </p>
-
+            <div class="capability-no">04 / DELIVERY</div>
+            <h3>Procurement & Project Support</h3>
+            <p>Construction-domain support connecting quantity, cost, procurement and project information.</p>
           </article>
-
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         R3QBOT
-         ===================================================== -->
-
-    <section
-      id="r3qbot"
-      class="section"
-    >
-
+    <section id="r3qbot" class="section">
       <div class="container product-grid">
-
-
         <div class="product-panel reveal">
-
-          <div class="product-mark">
-            R3QBOT
-          </div>
-
-          <p
-            style="
-              margin:0;
-              color:#b4c1b7;
-              font-size:1.04rem;
-            "
-          >
-
-            Flagship product of
-            R3PLEX Projects Solution
-
-          </p>
-
+          <div class="product-mark">R3QBOT</div>
+          <p style="margin:0;color:#b4c1b7;font-size:1.04rem">Flagship product of R3PLEX Projects Solution</p>
         </div>
-
 
         <div class="product-copy reveal">
-
-
-          <div class="eyebrow">
-
-            From drawings to trusted quantities
-
-          </div>
-
-
-          <h2 class="section-title">
-
-            A connected, reviewable
-            and auditable quantity
-            knowledge base.
-
-          </h2>
-
-
-          <p>
-
-            R3QBOT transforms construction drawings
-            into a connected, reviewable and auditable
-            quantity knowledge base.
-
-            It links drawings, details, schedules,
-            revisions, measurable elements, quantities,
-            assumptions, deviations and professional
-            decisions within one workspace.
-
-          </p>
-
+          <div class="eyebrow">From drawings to trusted quantities</div>
+          <h2 class="section-title">A connected, reviewable and auditable quantity knowledge base.</h2>
+          <p>R3QBOT transforms construction drawings into a connected, reviewable and auditable quantity knowledge base. It links drawings, details, schedules, revisions, measurable elements, quantities, assumptions, deviations and professional decisions within one workspace.</p>
 
           <div class="feature-list">
-
-
-            <div class="feature-row">
-
-              <span class="feature-icon">
-                1
-              </span>
-
-              <div>
-
-                <strong>
-                  One-click Area
-                </strong>
-
-                <span>
-
-                  For supported vector plans,
-                  one click should return one
-                  editable candidate or a
-                  structured refusal.
-
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="feature-row">
-
-              <span class="feature-icon">
-                ∑
-              </span>
-
-              <div>
-
-                <strong>
-                  Deterministic calculation
-                </strong>
-
-                <span>
-
-                  Approved geometry,
-                  confirmed scale and explicit
-                  rules produce repeatable quantities.
-
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="feature-row">
-
-              <span class="feature-icon">
-                ✓
-              </span>
-
-              <div>
-
-                <strong>
-                  Professional approval
-                </strong>
-
-                <span>
-
-                  AI suggestions remain draft
-                  until reviewed, corrected where
-                  needed and approved.
-
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="feature-row">
-
-              <span class="feature-icon">
-                ↗
-              </span>
-
-              <div>
-
-                <strong>
-                  Audit-ready export
-                </strong>
-
-                <span>
-
-                  Approved quantities retain
-                  source context and are prepared
-                  for structured Excel / CSV export.
-
-                </span>
-
-              </div>
-
-            </div>
-
-
+            <div class="feature-row"><span class="feature-icon">1</span><div><strong>One-click Area</strong><span>For supported vector plans, one click should return one editable candidate or a structured refusal.</span></div></div>
+            <div class="feature-row"><span class="feature-icon">∑</span><div><strong>Deterministic calculation</strong><span>Approved geometry, confirmed scale and explicit rules produce repeatable quantities.</span></div></div>
+            <div class="feature-row"><span class="feature-icon">✓</span><div><strong>Professional approval</strong><span>AI suggestions remain draft until reviewed, corrected where needed and approved.</span></div></div>
+            <div class="feature-row"><span class="feature-icon">↗</span><div><strong>Audit-ready export</strong><span>Approved quantities retain source context and are prepared for structured Excel / CSV export.</span></div></div>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         WORKFLOW
-         ===================================================== -->
-
-    <section
-      id="workflow"
-      class="section"
-    >
-
+    <section id="workflow" class="section">
       <div class="container">
+        <div class="eyebrow">How R3QBOT works</div>
+        <h2 class="section-title">AI assists. Deterministic services calculate. The QS remains the authority.</h2>
+        <p class="section-lead">The manual workflow remains a usable fallback whenever automated assistance is unavailable, unsuitable or rejected.</p>
 
-
-        <div class="eyebrow">
-          How R3QBOT works
+        <div class="workflow-list" aria-label="R3QBOT Phase 1 controlled workflow">
+          <article class="workflow-step reveal"><span class="workflow-no">01 / INTERPRET</span><h3>AI interpretation</h3><p>Read drawing context, labels and likely relationships as assistance.</p></article>
+          <article class="workflow-step reveal"><span class="workflow-no">02 / GEOMETRY</span><h3>Extract & validate</h3><p>Derive or manually create measurable geometry and validate its structure.</p></article>
+          <article class="workflow-step reveal"><span class="workflow-no">03 / CALCULATE</span><h3>Deterministic QS calculation</h3><p>Calculate from approved geometry, confirmed scale and explicit treatment rules.</p></article>
+          <article class="workflow-step reveal"><span class="workflow-no">04 / REVIEW</span><h3>Human review</h3><p>Inspect, edit, accept, reject, classify and resolve warnings or assumptions.</p></article>
+          <article class="workflow-step reveal"><span class="workflow-no">05 / APPROVE</span><h3>Professional approval</h3><p>Authorised review converts draft measurement work into approved quantities.</p></article>
+          <article class="workflow-step reveal"><span class="workflow-no">06 / EXPORT</span><h3>Structured export & audit</h3><p>Prepare Excel / CSV output and retain decision, source and revision history.</p></article>
         </div>
 
-
-        <h2 class="section-title">
-
-          AI assists.
-          Deterministic services calculate.
-          The QS remains the authority.
-
-        </h2>
-
-
-        <p class="section-lead">
-
-          The manual workflow remains a usable
-          fallback whenever automated assistance
-          is unavailable, unsuitable or rejected.
-
-        </p>
-
-
-        <div
-          class="workflow-list"
-          aria-label="R3QBOT Phase 1 controlled workflow"
-        >
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              01 / INTERPRET
-            </span>
-
-            <h3>
-              AI interpretation
-            </h3>
-
-            <p>
-
-              Read drawing context,
-              labels and likely relationships
-              as assistance.
-
-            </p>
-
-          </article>
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              02 / GEOMETRY
-            </span>
-
-            <h3>
-              Extract &amp; validate
-            </h3>
-
-            <p>
-
-              Derive or manually create
-              measurable geometry and
-              validate its structure.
-
-            </p>
-
-          </article>
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              03 / CALCULATE
-            </span>
-
-            <h3>
-
-              Deterministic QS calculation
-
-            </h3>
-
-            <p>
-
-              Calculate from approved geometry,
-              confirmed scale and explicit
-              treatment rules.
-
-            </p>
-
-          </article>
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              04 / REVIEW
-            </span>
-
-            <h3>
-              Human review
-            </h3>
-
-            <p>
-
-              Inspect, edit, accept,
-              reject, classify and resolve
-              warnings or assumptions.
-
-            </p>
-
-          </article>
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              05 / APPROVE
-            </span>
-
-            <h3>
-              Professional approval
-            </h3>
-
-            <p>
-
-              Authorised review converts
-              draft measurement work into
-              approved quantities.
-
-            </p>
-
-          </article>
-
-
-          <article class="workflow-step reveal">
-
-            <span class="workflow-no">
-              06 / EXPORT
-            </span>
-
-            <h3>
-
-              Structured export &amp; audit
-
-            </h3>
-
-            <p>
-
-              Prepare Excel / CSV output
-              and retain decision, source
-              and revision history.
-
-            </p>
-
-          </article>
-
-
-        </div>
-
-
-        <div class="workflow-principle">
-
-          <strong>
-            Product principle:
-          </strong>
-
-          R3QBOT supports Quantity Surveyor
-          judgement.
-
-          It does not replace the responsible
-          professional or present unreviewed
-          AI output as an approved quantity.
-
-        </div>
-
+        <div class="workflow-principle"><strong>Product principle:</strong> R3QBOT supports Quantity Surveyor judgement. It does not replace the responsible professional or present unreviewed AI output as an approved quantity.</div>
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         ROADMAP
-         ===================================================== -->
-
-    <section
-      id="roadmap"
-      class="section section-light"
-    >
-
+    <section id="roadmap" class="section section-light">
       <div class="container">
-
-
-        <div
-          class="eyebrow"
-          style="color:#238f26"
-        >
-
-          Product roadmap
-
-        </div>
-
-
-        <h2 class="section-title">
-
-          A narrow floor-area proof now.
-          Broader quantity intelligence
-          only after validation.
-
-        </h2>
-
-
-        <p class="section-lead">
-
-          Floor area is the first commercial
-          entry point, not the final product boundary.
-
-        </p>
-
+        <div class="eyebrow" style="color:#238f26">Product roadmap</div>
+        <h2 class="section-title">A narrow floor-area proof now. Broader quantity intelligence only after validation.</h2>
+        <p class="section-lead">Floor area is the first commercial entry point, not the final product boundary.</p>
 
         <div class="roadmap-grid">
-
-
           <article class="roadmap-card active reveal">
-
-
-            <span class="roadmap-tag">
-              Now / Phase 1
-            </span>
-
-
-            <h3>
-              Floor Area
-            </h3>
-
-
-            <p>
-
-              Complete the smallest
-              end-to-end professionally
-              controlled workflow.
-
-            </p>
-
-
+            <span class="roadmap-tag">Now / Phase 1</span>
+            <h3>Floor Area</h3>
+            <p>Complete the smallest end-to-end professionally controlled workflow.</p>
             <ul>
-
-              <li>
-                Multi-page PDF workflow
-                and scale confirmation
-              </li>
-
-              <li>
-                Manual polygon creation
-                and editing
-              </li>
-
-              <li>
-                One-click Area for selected
-                supported vector plans
-              </li>
-
-              <li>
-                Assumptions, deviations,
-                warnings and review states
-              </li>
-
-              <li>
-                Professional approval,
-                persistence and Excel / CSV export
-              </li>
-
+              <li>Multi-page PDF workflow and scale confirmation</li>
+              <li>Manual polygon creation and editing</li>
+              <li>One-click Area for selected supported vector plans</li>
+              <li>Assumptions, deviations, warnings and review states</li>
+              <li>Professional approval, persistence and Excel / CSV export</li>
             </ul>
-
-
           </article>
-
 
           <article class="roadmap-card reveal">
-
-
-            <span class="roadmap-tag">
-
-              Next / validated expansion
-
-            </span>
-
-
-            <h3>
-              Structural Quantities
-            </h3>
-
-
-            <p>
-
-              Expand only after customer demand,
-              rules and benchmark evidence are
-              established.
-
-            </p>
-
-
+            <span class="roadmap-tag">Next / validated expansion</span>
+            <h3>Structural Quantities</h3>
+            <p>Expand only after customer demand, rules and benchmark evidence are established.</p>
             <ul>
-
-              <li>
-                Beams
-              </li>
-
-              <li>
-                Slabs
-              </li>
-
-              <li>
-                Columns
-              </li>
-
+              <li>Beams</li>
+              <li>Slabs</li>
+              <li>Columns</li>
             </ul>
-
-
           </article>
-
 
           <article class="roadmap-card reveal">
-
-
-            <span class="roadmap-tag">
-              Future
-            </span>
-
-
-            <h3>
-
-              Connected Quantity Intelligence
-
-            </h3>
-
-
-            <p>
-
-              Future modules remain subject to
-              separate product, data, rules
-              and pilot gates.
-
-            </p>
-
-
+            <span class="roadmap-tag">Future</span>
+            <h3>Connected Quantity Intelligence</h3>
+            <p>Future modules remain subject to separate product, data, rules and pilot gates.</p>
             <ul>
-
-              <li>
-
-                Walls, doors, windows and
-                other architectural elements
-
-              </li>
-
-              <li>
-                Civil and M&amp;E quantities
-              </li>
-
-              <li>
-
-                Cost knowledge,
-                BOQ linkage and quotation review
-
-              </li>
-
-              <li>
-
-                Carbon, procurement
-                and supplier evidence
-
-              </li>
-
-              <li>
-
-                BIM / ERP
-                and other integrations
-
-              </li>
-
+              <li>Walls, doors, windows and other architectural elements</li>
+              <li>Civil and M&amp;E quantities</li>
+              <li>Cost knowledge, BOQ linkage and quotation review</li>
+              <li>Carbon, procurement and supplier evidence</li>
+              <li>BIM / ERP and other integrations</li>
             </ul>
-
-
           </article>
-
-
         </div>
 
-
-        <p class="roadmap-boundary">
-
-          Current boundary:
-          whole-page Auto Measure and
-          automatic professional approval
-          are not part of the immediate
-          Phase 1 proof.
-
-        </p>
-
+        <p class="roadmap-boundary">Current boundary: whole-page Auto Measure and automatic professional approval are not part of the immediate Phase 1 proof.</p>
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         FOUNDER
-         ===================================================== -->
-
-    <section
-      id="founder"
-      class="section"
-    >
-
+    <section id="founder" class="section">
       <div class="container founder-grid">
-
-
-        <div
-          class="founder-card reveal"
-          aria-label="Founder profile placeholder for Ryan Ong"
-        >
-
-          <div
-            class="founder-monogram"
-            aria-hidden="true"
-          >
-            RO
-          </div>
-
+        <div class="founder-card reveal" aria-label="Founder profile placeholder for Ryan Ong">
+          <div class="founder-monogram" aria-hidden="true">RO</div>
         </div>
-
 
         <div class="founder-copy reveal">
-
-
-          <div class="eyebrow">
-            Founder
-          </div>
-
-
-          <h2>
-            Ryan Ong
-          </h2>
-
-
-          <div class="founder-role">
-
-            Founder —
-            R3PLEX Projects Solution
-
-          </div>
-
-
-          <p>
-
-            R3PLEX is founder-led.
-
-            The company’s product direction
-            is grounded in quantity surveying
-            and construction-delivery experience,
-            with specialist support added where
-            independent professional review,
-            cybersecurity, privacy, licensing,
-            DevOps, UX or other expertise
-            is required.
-
-          </p>
-
-
+          <div class="eyebrow">Founder</div>
+          <h2>Ryan Ong</h2>
+          <div class="founder-role">Founder — R3PLEX Projects Solution</div>
+          <p>R3PLEX is founder-led. The company’s product direction is grounded in quantity surveying and construction-delivery experience, with specialist support added where independent professional review, cybersecurity, privacy, licensing, DevOps, UX or other expertise is required.</p>
           <ul class="founder-list">
-
-
-            <li>
-
-              <strong>
-                Bachelor of Quantity Surveying
-              </strong>
-
-              —
-              Universiti Tunku Abdul Rahman
-              (UTAR)
-
-            </li>
-
-
-            <li>
-
-              <strong>
-
-                Master of International
-                Construction and Project Management
-
-              </strong>
-
-              —
-              Tsinghua University
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                Professional background
-              </strong>
-
-              —
-              quantity surveying,
-              cost control,
-              tendering,
-              procurement,
-              facilities-related works
-              and project coordination
-
-            </li>
-
-
-            <li>
-
-              <strong>
-                R3QBOT responsibility
-              </strong>
-
-              —
-              product vision,
-              QS workflow definition,
-              customer discovery,
-              commercial decisions
-              and acceptance authority
-
-            </li>
-
-
+            <li><strong>Bachelor of Quantity Surveying</strong> — Universiti Tunku Abdul Rahman (UTAR)</li>
+            <li><strong>Master of International Construction and Project Management</strong> — Tsinghua University</li>
+            <li><strong>Professional background</strong> — quantity surveying, cost control, tendering, procurement, facilities-related works and project coordination</li>
+            <li><strong>R3QBOT responsibility</strong> — product vision, QS workflow definition, customer discovery, commercial decisions and acceptance authority</li>
           </ul>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =====================================================
-         CONTACT
-         ===================================================== -->
-
-    <section
-      id="contact"
-      class="section"
-    >
-
+    <section id="contact" class="section">
       <div class="container contact-shell reveal">
-
-
         <div>
-
-
-          <div class="eyebrow">
-            Request a pilot
-          </div>
-
-
-          <h2>
-
-            Have a real drawing workflow
-            worth testing?
-
-          </h2>
-
-
-          <p>
-
-            R3PLEX is developing R3QBOT
-            through controlled validation.
-
-            Pilot discussions should focus
-            on real quantity-take-off workflows,
-            supported drawings, review effort
-            and measurable professional value.
-
-          </p>
-
+          <div class="eyebrow">Request a pilot</div>
+          <h2>Have a real drawing workflow worth testing?</h2>
+          <p>R3PLEX is developing R3QBOT through controlled validation. Pilot discussions should focus on real quantity-take-off workflows, supported drawings, review effort and measurable professional value.</p>
 
           <div class="hero-actions">
-
-
-            <a
-              class="button button-primary"
-              href="mailto:ryanong.r3plex@gmail.com?subject=R3QBOT%20Pilot%20Enquiry&amp;body=Hello%20R3PLEX%2C%0A%0AI%20am%20interested%20in%20discussing%20an%20R3QBOT%20pilot.%0A%0ACompany%20%2F%20organisation%3A%0ARole%3A%0ATypical%20drawing%20workflow%3A%0AWhat%20I%20would%20like%20to%20test%3A%0A%0ARegards%2C"
-            >
-
-              Request a Pilot by Email
-
-            </a>
-
-
-            <a
-              class="button button-secondary"
-              href="mailto:ryanong.r3plex@gmail.com?subject=R3PLEX%20General%20Enquiry"
-            >
-
-              General Enquiry
-
-            </a>
-
-
+            <a class="button button-primary" href="mailto:ryanong.r3plex@gmail.com?subject=R3QBOT%20Pilot%20Enquiry&amp;body=Hello%20R3PLEX%2C%0A%0AI%20am%20interested%20in%20discussing%20an%20R3QBOT%20pilot.%0A%0ACompany%20%2F%20organisation%3A%0ARole%3A%0ATypical%20drawing%20workflow%3A%0AWhat%20I%20would%20like%20to%20test%3A%0A%0ARegards%2C">Request a Pilot by Email</a>
+            <a class="button button-secondary" href="mailto:ryanong.r3plex@gmail.com?subject=R3PLEX%20General%20Enquiry">General Enquiry</a>
           </div>
-
         </div>
-
 
         <div class="contact-card">
+          <div class="label">Email</div>
+          <a href="mailto:ryanong.r3plex@gmail.com">ryanong.r3plex@gmail.com</a>
 
+          <div class="label" style="margin-top:20px">Base</div>
+          <div class="location">Penang, Malaysia</div>
 
-          <div class="label">
-            Email
-          </div>
-
-
-          <a
-            href="mailto:ryanong.r3plex@gmail.com"
-          >
-
-            ryanong.r3plex@gmail.com
-
-          </a>
-
-
-          <div
-            class="label"
-            style="margin-top:20px"
-          >
-            Base
-          </div>
-
-
-          <div class="location">
-
-            Penang, Malaysia
-
-          </div>
-
-
-          <div
-            class="label"
-            style="margin-top:20px"
-          >
-            Business
-          </div>
-
-
-          <div class="location">
-
-            R3PLEX Projects Solution
-
-            <br>
-
-            Registration No. AS0483025-P
-
-          </div>
-
-
+          <div class="label" style="margin-top:20px">Business</div>
+          <div class="location">R3PLEX Projects Solution<br>Registration No. AS0483025-P</div>
         </div>
-
       </div>
-
     </section>
-
-
   </main>
 
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
-
   <footer class="footer">
-
     <div class="container footer-row">
-
-
       <div class="footer-brand">
-
-
         <span class="footer-logo-plate">
-
-          <img
-            class="footer-logo"
-            src="R3PLEX.png"
-            alt="R3PLEX Projects Solution logo"
-          >
-
+          <img class="footer-logo" src="R3PLEX.png" alt="R3PLEX Projects Solution logo">
         </span>
-
-
-        <span class="footer-brand-text">
-
-          Construction technology built
-          around professional control.
-
-        </span>
-
-
+        <span>Construction technology built around professional control.</span>
       </div>
-
-
-      <div>
-
-        ©
-        <span id="year">
-          2026
-        </span>
-
-        R3PLEX Projects Solution.
-        All rights reserved.
-
-      </div>
-
-
+      <div>© <span id="year">2026</span> R3PLEX Projects Solution. All rights reserved.</div>
     </div>
-
   </footer>
 
-
-  <!-- =======================================================
-       JAVASCRIPT
-       ======================================================= -->
-
   <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navigation = document.querySelector('.nav-links');
 
-    /* =======================================================
-       MOBILE NAVIGATION
-       ======================================================= */
+    menuButton.addEventListener('click', () => {
+      const isOpen = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      menuButton.querySelector('span').textContent = isOpen ? '×' : '☰';
+    });
 
-    const menuButton =
-      document.querySelector(
-        ".menu-button"
-      );
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        menuButton.querySelector('span').textContent = '☰';
+      });
+    });
 
-
-    const navigation =
-      document.querySelector(
-        ".nav-links"
-      );
-
-
-    menuButton.addEventListener(
-      "click",
-      () => {
-
-        const isOpen =
-          navigation.classList.toggle(
-            "open"
-          );
-
-
-        menuButton.setAttribute(
-          "aria-expanded",
-          String(isOpen)
-        );
-
-
-        menuButton.setAttribute(
-          "aria-label",
-
-          isOpen
-            ? "Close navigation menu"
-            : "Open navigation menu"
-        );
-
-
-        menuButton
-          .querySelector("span")
-          .textContent =
-            isOpen
-              ? "×"
-              : "☰";
-
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        menuButton.querySelector('span').textContent = '☰';
       }
-    );
+    });
 
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
 
-    /* =======================================================
-       CLOSE NAV AFTER CLICK
-       ======================================================= */
-
-    navigation
-      .querySelectorAll("a")
-      .forEach(
-        link => {
-
-          link.addEventListener(
-            "click",
-            () => {
-
-              navigation
-                .classList
-                .remove("open");
-
-
-              menuButton
-                .setAttribute(
-                  "aria-expanded",
-                  "false"
-                );
-
-
-              menuButton
-                .setAttribute(
-                  "aria-label",
-                  "Open navigation menu"
-                );
-
-
-              menuButton
-                .querySelector("span")
-                .textContent =
-                  "☰";
-
-            }
-          );
-
-        }
-      );
-
-
-    /* =======================================================
-       ESCAPE CLOSES MENU
-       ======================================================= */
-
-    document.addEventListener(
-      "keydown",
-      event => {
-
-        if (
-          event.key ===
-          "Escape"
-        ) {
-
-          navigation
-            .classList
-            .remove("open");
-
-
-          menuButton
-            .setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-
-          menuButton
-            .setAttribute(
-              "aria-label",
-              "Open navigation menu"
-            );
-
-
-          menuButton
-            .querySelector("span")
-            .textContent =
-              "☰";
-
-        }
-
-      }
-    );
-
-
-    /* =======================================================
-       SCROLL REVEAL
-       ======================================================= */
-
-    const reducedMotion =
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-
-    const reveals =
-      document.querySelectorAll(
-        ".reveal"
-      );
-
-
-    if (
-      reducedMotion ||
-      !(
-        "IntersectionObserver"
-        in window
-      )
-    ) {
-
-      reveals.forEach(
-        element => {
-
-          element.classList.add(
-            "visible"
-          );
-
-        }
-      );
-
-    }
-
-    else {
-
-      const observer =
-        new IntersectionObserver(
-
-          entries => {
-
-            entries.forEach(
-              entry => {
-
-                if (
-                  entry.isIntersecting
-                ) {
-
-                  entry.target
-                    .classList
-                    .add(
-                      "visible"
-                    );
-
-
-                  observer
-                    .unobserve(
-                      entry.target
-                    );
-
-                }
-
-              }
-            );
-
-          },
-
-          {
-            threshold: 0.08
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
           }
+        });
+      }, { threshold: .08 });
 
-        );
-
-
-      reveals.forEach(
-        element => {
-
-          observer.observe(
-            element
-          );
-
-        }
-      );
-
+      reveals.forEach(el => observer.observe(el));
     }
 
-
-    /* =======================================================
-       COPYRIGHT YEAR
-       ======================================================= */
-
-    document
-      .getElementById(
-        "year"
-      )
-      .textContent =
-        new Date()
-          .getFullYear();
-
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-
 </body>
 </html>
