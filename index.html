@@ -27,7 +27,7 @@
   <meta name="twitter:description" content="Quantity surveying, construction technology and R3QBOT, an AI-assisted drawing intelligence and quantity take-off platform in MVP development.">
   <meta name="twitter:image" content="https://r3plex-projects-solution.github.io/r3plex-site/assets/og-image.png">
 
-  <link rel="preload" as="image" href="assets/r3plex-logo-480.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/r3plex-mark.webp" type="image/webp">
 
   <script type="application/ld+json">
   {
@@ -130,6 +130,34 @@
       white-space: nowrap;
       opacity: .85;
     }
+
+    /* Header lockup: transparent R3 mark + live-text wordmark */
+    .brand { gap: 12px; }
+    .brand-mark {
+      display: block;
+      width: auto;
+      height: 40px;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand-name {
+      color: var(--text);
+      font-size: 1.16rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+    .brand-name span { color: var(--green); }
+    .brand-sub {
+      margin-top: 6px;
+      color: var(--green);
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+    }
+    .brand:hover .brand-name { color: #fff; }
 
     .menu-button:focus-visible,
     .button:focus-visible,
@@ -871,7 +899,7 @@
     }
 
     @media (max-width: 860px) {
-      .brand-logo { height: 48px; max-width: 165px; }
+      .brand-mark { height: 38px; }
       .nav-dropdown summary {
         padding: 11px 12px;
       }
@@ -951,7 +979,9 @@
       .workflow-step h3 { margin-top: 48px; }
       .status-track { grid-template-columns: 1fr 1fr; }
       .footer-row { flex-direction: column; align-items: flex-start; }
-      .brand-logo { height: 42px; max-width: 145px; }
+      .brand-mark { height: 34px; }
+      .brand-name { font-size: 1.04rem; }
+      .brand-sub { font-size: .54rem; letter-spacing: .26em; }
       .footer-logo { height: 40px; max-width: 130px; }
     }
 
@@ -998,9 +1028,13 @@
       <a class="brand" href="#home" aria-label="R3PLEX Projects Solution home">
         <span class="brand-logo-plate">
           <picture>
-            <source srcset="assets/r3plex-logo-480.webp" type="image/webp">
-            <img class="brand-logo" src="assets/r3plex-logo-480.png" alt="R3PLEX Projects Solution logo" width="480" height="300" decoding="async" fetchpriority="high">
+            <source srcset="assets/r3plex-mark.webp" type="image/webp">
+            <img class="brand-mark" src="assets/r3plex-mark.png" alt="" width="160" height="142" decoding="async" fetchpriority="high">
           </picture>
+        </span>
+        <span class="brand-text" aria-hidden="true">
+          <span class="brand-name">R<span>3</span>PLEX</span>
+          <span class="brand-sub">PROJECTS SOLUTION</span>
         </span>
       </a>
 
@@ -1261,8 +1295,8 @@
       <div class="footer-brand">
         <span class="footer-logo-plate">
           <picture>
-            <source srcset="assets/r3plex-logo-480.webp" type="image/webp">
-            <img class="footer-logo" src="assets/r3plex-logo-480.png" alt="R3PLEX Projects Solution logo" width="480" height="300" loading="lazy" decoding="async">
+            <source srcset="assets/r3plex-logo-transparent.webp" type="image/webp">
+            <img class="footer-logo" src="assets/r3plex-logo-transparent.png" alt="R3PLEX Projects Solution logo" width="480" height="311" loading="lazy" decoding="async">
           </picture>
         </span>
         <span>Construction technology built around professional control.</span>
