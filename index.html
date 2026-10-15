@@ -4,11 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050805">
-  <meta name="description" content="R3PLEX Projects Solution is a Malaysia-based construction consultancy and technology venture developing R3QBOT, a drawing-first, reviewable and auditable quantity intelligence workspace.">
-  <title>R3PLEX Projects Solution | Construction Technology & R3QBOT</title>
-  <meta property="og:title" content="R3PLEX Projects Solution | Construction Technology & R3QBOT">
-  <meta property="og:description" content="Building practical intelligence for construction. Explore R3QBOT, the R3PLEX flagship product for reviewable and auditable quantity take-off.">
+  <meta name="description" content="R3PLEX Projects Solution is a Malaysia-based quantity surveying and construction technology venture developing R3QBOT, an AI-assisted drawing intelligence and quantity take-off platform (in MVP development).">
+  <title>R3PLEX Projects Solution | Construction Technology &amp; R3QBOT</title>
+  <link rel="canonical" href="https://r3plex-projects-solution.github.io/r3plex-site/">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:site_name" content="R3PLEX Projects Solution">
+  <meta property="og:title" content="R3PLEX Projects Solution | Construction Technology &amp; R3QBOT">
+  <meta property="og:description" content="Building practical intelligence for construction. R3QBOT is an AI-assisted drawing intelligence and quantity take-off platform, currently in MVP development.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://r3plex-projects-solution.github.io/r3plex-site/">
+  <meta property="og:locale" content="en_MY">
+  <meta property="og:image" content="https://r3plex-projects-solution.github.io/r3plex-site/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="R3PLEX Projects Solution logo on a dark green grid background">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="R3PLEX Projects Solution | Construction Technology &amp; R3QBOT">
+  <meta name="twitter:description" content="Quantity surveying, construction technology and R3QBOT, an AI-assisted drawing intelligence and quantity take-off platform in MVP development.">
+  <meta name="twitter:image" content="https://r3plex-projects-solution.github.io/r3plex-site/assets/og-image.png">
+
+  <link rel="preload" as="image" href="assets/r3plex-mark.webp" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "R3PLEX Projects Solution",
+    "url": "https://r3plex-projects-solution.github.io/r3plex-site/",
+    "logo": "https://r3plex-projects-solution.github.io/r3plex-site/assets/r3plex-logo-480.png",
+    "email": "ryanong.r3plex@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Penang", "addressCountry": "MY" },
+    "founder": { "@type": "Person", "name": "Ryan Ong" }
+  }
+  </script>
 
   <style>
     :root {
@@ -63,6 +95,76 @@
       transition: top .2s ease;
     }
     .skip-link:focus { top: 16px; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero-visual { flex-direction: column; }
+
+    .concept-tag {
+      display: inline-block;
+      margin-top: 12px;
+      color: #829287;
+      font-size: .74rem;
+      letter-spacing: .04em;
+    }
+
+    .dev-tag {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 8px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: .72em;
+      font-weight: 700;
+      letter-spacing: .03em;
+      white-space: nowrap;
+      opacity: .85;
+    }
+
+    /* Header lockup: transparent R3 mark + live-text wordmark */
+    .brand { gap: 12px; }
+    .brand-mark {
+      display: block;
+      width: auto;
+      height: 40px;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .brand-name {
+      color: var(--text);
+      font-size: 1.16rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+    .brand-name span { color: var(--green); }
+    .brand-sub {
+      margin-top: 6px;
+      color: var(--green);
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+    }
+    .brand:hover .brand-name { color: #fff; }
+
+    .menu-button:focus-visible,
+    .button:focus-visible,
+    .brand:focus-visible {
+      outline: 2px solid #39d43e;
+      outline-offset: 3px;
+    }
 
     .eyebrow {
       display: inline-flex;
@@ -504,7 +606,7 @@
       box-shadow: 0 16px 50px rgba(16,32,21,.08);
     }
     .status-card .label {
-      color: #698071;
+      color: #5b7063;
       font-size: .76rem;
       font-weight: 800;
       letter-spacing: .1em;
@@ -797,7 +899,7 @@
     }
 
     @media (max-width: 860px) {
-      .brand-logo { height: 48px; max-width: 165px; }
+      .brand-mark { height: 38px; }
       .nav-dropdown summary {
         padding: 11px 12px;
       }
@@ -877,7 +979,9 @@
       .workflow-step h3 { margin-top: 48px; }
       .status-track { grid-template-columns: 1fr 1fr; }
       .footer-row { flex-direction: column; align-items: flex-start; }
-      .brand-logo { height: 42px; max-width: 145px; }
+      .brand-mark { height: 34px; }
+      .brand-name { font-size: 1.04rem; }
+      .brand-sub { font-size: .54rem; letter-spacing: .26em; }
       .footer-logo { height: 40px; max-width: 130px; }
     }
 
@@ -923,7 +1027,14 @@
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="R3PLEX Projects Solution home">
         <span class="brand-logo-plate">
-          <img class="brand-logo" src="R3PLEX.png" alt="R3PLEX Projects Solution logo">
+          <picture>
+            <source srcset="assets/r3plex-mark.webp" type="image/webp">
+            <img class="brand-mark" src="assets/r3plex-mark.png" alt="" width="160" height="142" decoding="async" fetchpriority="high">
+          </picture>
+        </span>
+        <span class="brand-text" aria-hidden="true">
+          <span class="brand-name">R<span>3</span>PLEX</span>
+          <span class="brand-sub">PROJECTS SOLUTION</span>
         </span>
       </a>
 
@@ -950,6 +1061,7 @@
                 >
                   <span>R3QBOT</span>
                   <span class="external-arrow" aria-hidden="true">↗</span>
+                  <span class="sr-only">(opens in a new tab)</span>
                 </a>
               </div>
             </details>
@@ -972,11 +1084,11 @@
           <p class="hero-copy">Quantity surveying, construction technology and drawing intelligence designed around professional control.</p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">Open R3QBOT Site ↗</a>
+            <a class="button button-primary" href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">Open R3QBOT Site <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
             <a class="button button-secondary" href="#contact">Request a Pilot</a>
           </div>
 
-          <div class="hero-note" aria-label="Company positioning">
+          <div class="hero-note" role="group" aria-label="Company positioning">
             <span>Malaysia-based</span>
             <span>Construction technology</span>
             <span>Quantity surveying</span>
@@ -984,8 +1096,8 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Conceptual R3QBOT One-click Area visual">
-          <div class="drawing-card">
+        <div class="hero-visual reveal" role="img" aria-label="Concept illustration of the R3QBOT drawing workspace: candidate area geometry is reviewed by a Quantity Surveyor before a deterministic quantity is calculated. Not live product output.">
+          <div class="drawing-card" aria-hidden="true">
             <div class="drawing-top">
               <span>R3QBOT / Drawing workspace</span>
               <span class="drawing-dot" aria-hidden="true"></span>
@@ -1003,6 +1115,7 @@
               <span class="measure-pill">QS REVIEW</span>
             </div>
           </div>
+          <span class="concept-tag" aria-hidden="true">Concept illustration · One-click Area is in development</span>
         </div>
       </div>
     </section>
@@ -1010,23 +1123,23 @@
     <section id="about" class="section section-light">
       <div class="container about-grid">
         <div class="about-copy reveal">
-          <div class="eyebrow" style="color:#238f26">About R3PLEX</div>
+          <div class="eyebrow" style="color:#1e7a21">About R3PLEX</div>
           <h2 class="section-title">Construction-domain knowledge, translated into practical digital tools.</h2>
           <p>R3PLEX Projects Solution is a Malaysia-based construction consultancy and technology venture focused on quantity surveying, cost management, procurement support, project coordination, digital reporting, construction documentation and practical construction technology.</p>
-          <p>Its flagship product, R3QBOT, is being developed as an AI-assisted quantity take-off and drawing-intelligence platform with professional review and auditability at the centre of the workflow.</p>
+          <p>Its flagship product, R3QBOT, is being developed as an AI-assisted drawing intelligence and quantity take-off platform, with professional review and auditability at the centre of the workflow.</p>
         </div>
 
-        <aside class="status-card reveal">
+        <div class="status-card reveal">
           <div class="label">Current product stage</div>
           <h3>Founder-developed prototype in active MVP development</h3>
           <p>R3PLEX separates prototype, MVP, pilot and production status. R3QBOT is not presented as production-ready or as an autonomous quantity authority.</p>
-          <div class="status-track" aria-label="R3QBOT product stages">
+          <div class="status-track" role="group" aria-label="R3QBOT product stages">
             <div class="status-node done">Foundation</div>
             <div class="status-node current">MVP</div>
             <div class="status-node">Pilot</div>
             <div class="status-node">Production</div>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -1067,7 +1180,7 @@
         <h2 class="section-title">AI assists. Deterministic services calculate. The QS remains the authority.</h2>
         <p class="section-lead">The manual workflow remains a usable fallback whenever automated assistance is unavailable, unsuitable or rejected.</p>
 
-        <div class="workflow-list" aria-label="R3QBOT Phase 1 controlled workflow">
+        <div class="workflow-list" role="group" aria-label="R3QBOT Phase 1 controlled workflow">
           <article class="workflow-step reveal"><span class="workflow-no">01 / INTERPRET</span><h3>AI interpretation</h3><p>Read drawing context, labels and likely relationships as assistance.</p></article>
           <article class="workflow-step reveal"><span class="workflow-no">02 / GEOMETRY</span><h3>Extract & validate</h3><p>Derive or manually create measurable geometry and validate its structure.</p></article>
           <article class="workflow-step reveal"><span class="workflow-no">03 / CALCULATE</span><h3>Deterministic QS calculation</h3><p>Calculate from approved geometry, confirmed scale and explicit treatment rules.</p></article>
@@ -1082,19 +1195,19 @@
 
     <section id="roadmap" class="section section-light">
       <div class="container">
-        <div class="eyebrow" style="color:#238f26">Product roadmap</div>
+        <div class="eyebrow" style="color:#1e7a21">Product roadmap</div>
         <h2 class="section-title">A narrow floor-area proof now. Broader quantity intelligence only after validation.</h2>
         <p class="section-lead">Floor area is the first commercial entry point, not the final product boundary.</p>
 
         <div class="roadmap-grid">
           <article class="roadmap-card active reveal">
-            <span class="roadmap-tag">Now / Phase 1</span>
+            <span class="roadmap-tag">Now / Phase 1 · in MVP development</span>
             <h3>Floor Area</h3>
-            <p>Complete the smallest end-to-end professionally controlled workflow.</p>
+            <p>Complete the smallest end-to-end professionally controlled workflow. Phase 1 scope is being built and validated; it is not yet a production release.</p>
             <ul>
               <li>Multi-page PDF workflow and scale confirmation</li>
               <li>Manual polygon creation and editing</li>
-              <li>One-click Area for selected supported vector plans</li>
+              <li>One-click Area for selected supported vector plans <span class="dev-tag">In development</span></li>
               <li>Assumptions, deviations, warnings and review states</li>
               <li>Professional approval, persistence and Excel / CSV export</li>
             </ul>
@@ -1131,7 +1244,7 @@
 
     <section id="founder" class="section">
       <div class="container founder-grid">
-        <div class="founder-card reveal" aria-label="Founder profile placeholder for Ryan Ong">
+        <div class="founder-card reveal">
           <div class="founder-monogram" aria-hidden="true">RO</div>
         </div>
 
@@ -1181,7 +1294,10 @@
     <div class="container footer-row">
       <div class="footer-brand">
         <span class="footer-logo-plate">
-          <img class="footer-logo" src="R3PLEX.png" alt="R3PLEX Projects Solution logo">
+          <picture>
+            <source srcset="assets/r3plex-logo-transparent.webp" type="image/webp">
+            <img class="footer-logo" src="assets/r3plex-logo-transparent.png" alt="R3PLEX Projects Solution logo" width="480" height="311" loading="lazy" decoding="async">
+          </picture>
         </span>
         <span>Construction technology built around professional control.</span>
       </div>
@@ -1210,7 +1326,8 @@
     });
 
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape' && navigation.classList.contains('open')) {
+        menuButton.focus();
         navigation.classList.remove('open');
         menuButton.setAttribute('aria-expanded', 'false');
         menuButton.setAttribute('aria-label', 'Open navigation menu');
