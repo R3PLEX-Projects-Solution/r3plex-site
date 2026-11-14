@@ -336,6 +336,8 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
   .track::before,.track::after{display:none}
 }
 @media (max-width:920px){
+  /* A filtered header would become the containing block for the fixed menu. */
+  .site-header.scrolled{background:rgba(5,7,5,.98);backdrop-filter:none;-webkit-backdrop-filter:none}
   .nav > nav{position:absolute;margin-left:0}
   .menu-btn{display:grid}
   .nav-cta.desktop{display:none}
