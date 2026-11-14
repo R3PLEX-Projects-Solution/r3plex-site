@@ -228,6 +228,7 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
 .tab[aria-selected="true"] svg{color:var(--g)}
 .panel{display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;align-items:center;margin-top:30px}
 .panel[hidden]{display:none}
+.panel,.panel .frame{scroll-margin-top:96px}
 .panel-copy h4{font-family:var(--display);font-size:clamp(1.7rem,2.6vw,2.2rem);margin:16px 0 10px;letter-spacing:-.02em}
 .panel-copy>p{color:#bcc5bb;margin:0 0 20px}
 .cap-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}
@@ -438,11 +439,11 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
               <em>Open R3QBOT site ↗</em>
             </a>
             <div class="mega-list">
-              <a href="#products" data-tab="register"><span class="ic"><svg><use href="#i-register"/></svg></span><span><b>Project Register</b><small>Portfolio &amp; package analytics</small></span></a>
-              <a href="#products" data-tab="prelims"><span class="ic"><svg><use href="#i-calc"/></svg></span><span><b>Preliminaries Library</b><small>Standardised items &amp; estimator</small></span></a>
-              <a href="#products" data-tab="bq"><span class="ic"><svg><use href="#i-book"/></svg></span><span><b>BQ Trades &amp; Unit Rates</b><small>SMM-structured rate library</small></span></a>
-              <a href="#products" data-tab="model3d"><span class="ic"><svg><use href="#i-cube"/></svg></span><span><b>3D Structural Model</b><small>Concrete &amp; formwork quantities</small></span></a>
-              <a href="#products" data-tab="earth"><span class="ic"><svg><use href="#i-terrain"/></svg></span><span><b>Earthwork Take-off</b><small>Cut, fill &amp; material balance</small></span></a>
+              <a href="#p-register" data-tab="register"><span class="ic"><svg><use href="#i-register"/></svg></span><span><b>Project Register</b><small>Portfolio &amp; package analytics</small></span></a>
+              <a href="#p-prelims" data-tab="prelims"><span class="ic"><svg><use href="#i-calc"/></svg></span><span><b>Preliminaries Library</b><small>Standardised items &amp; estimator</small></span></a>
+              <a href="#p-bq" data-tab="bq"><span class="ic"><svg><use href="#i-book"/></svg></span><span><b>BQ Trades &amp; Unit Rates</b><small>SMM-structured rate library</small></span></a>
+              <a href="#p-model3d" data-tab="model3d"><span class="ic"><svg><use href="#i-cube"/></svg></span><span><b>3D Structural Model</b><small>Concrete &amp; formwork quantities</small></span></a>
+              <a href="#p-earth" data-tab="earth"><span class="ic"><svg><use href="#i-terrain"/></svg></span><span><b>Earthwork Take-off</b><small>Cut, fill &amp; material balance</small></span></a>
             </div>
           </div>
         </li>
@@ -690,12 +691,12 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
         <h4>R3QBOT</h4><p>AI-assisted, QS-reviewed floor-area take-off. Phase 1 proof in progress.</p>
         <span class="go"><svg><use href="#i-ext"/></svg></span>
       </a>
-      <a class="mini reveal d1" href="#products" data-tab="register">
+      <a class="mini reveal d1" href="#p-register" data-tab="register">
         <div class="top"><span class="ic"><svg><use href="#i-register"/></svg></span><span class="badge amber" style="font-size:.6rem">Internal</span></div>
         <h4>Project Register</h4><p>Portfolio records, package sums and verification status in one place.</p>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
       </a>
-      <a class="mini reveal d2" href="#products" data-tab="prelims">
+      <a class="mini reveal d2" href="#p-prelims" data-tab="prelims">
         <div class="top"><span class="ic"><svg><use href="#i-calc"/></svg></span><span class="badge amber" style="font-size:.6rem">Internal</span></div>
         <h4>Preliminaries Library</h4><p>Standardised Preliminaries items with a safeguarded estimator.</p>
         <span class="go"><svg><use href="#i-arrow"/></svg></span>
@@ -773,7 +774,7 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
       <p>Construction technology built around professional control.</p>
     </div>
     <div class="f-col"><h3>Company</h3><ul><li><a href="#about">About</a></li><li><a href="#capabilities">Capabilities</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
-    <div class="f-col"><h3>Products</h3><ul><li><a href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">R3QBOT ↗</a></li><li><a href="#products" data-tab="register">Project Register</a></li><li><a href="#products" data-tab="prelims">Preliminaries Library</a></li><li><a href="#products" data-tab="bq">BQ Trades &amp; Unit Rates</a></li><li><a href="#products" data-tab="model3d">3D Structural Model</a></li><li><a href="#products" data-tab="earth">Earthwork Take-off</a></li></ul></div>
+    <div class="f-col"><h3>Products</h3><ul><li><a href="https://r3plex-projects-solution.github.io/r3qbot-site/" target="_blank" rel="noopener noreferrer">R3QBOT ↗</a></li><li><a href="#p-register" data-tab="register">Project Register</a></li><li><a href="#p-prelims" data-tab="prelims">Preliminaries Library</a></li><li><a href="#p-bq" data-tab="bq">BQ Trades &amp; Unit Rates</a></li><li><a href="#p-model3d" data-tab="model3d">3D Structural Model</a></li><li><a href="#p-earth" data-tab="earth">Earthwork Take-off</a></li></ul></div>
     <div class="f-col"><h3>Contact</h3><ul><li><a href="mailto:ryanong.r3plex@gmail.com">ryanong.r3plex@gmail.com</a></li><li class="soon">Penang, Malaysia</li><li class="soon">Reg. No. AS0483025-P</li><li><a href="#contact">Request a Pilot</a></li></ul></div>
   </div>
   <div class="container f-bottom"><span>© <span id="year">2026</span> R3PLEX Projects Solution. All rights reserved.</span><span>AI output is assistive. Approved quantities require professional review.</span></div>
@@ -843,27 +844,52 @@ h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.08;marg
   if (document.fonts) document.fonts.ready.then(updateTabScroll);
   updateTabScroll();
   const tabs = [...document.querySelectorAll('[role="tab"]')];
-  const selectTab = (tab, focus) => {
+  const selectTab = (tab, focus, updateHash = false) => {
     tabs.forEach(t => {
       const on = t === tab;
       t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
     if (focus) tab.focus();
-    tab.scrollIntoView({block:'nearest', inline:'center', behavior: reduce ? 'auto' : 'smooth'});
+    if (updateHash) history.replaceState(history.state, '', '#' + tab.getAttribute('aria-controls'));
+    const strip = tabStrip.getBoundingClientRect(), item = tab.getBoundingClientRect();
+    const offset = item.left < strip.left ? item.left - strip.left : item.right > strip.right ? item.right - strip.right : 0;
+    if (offset) tabStrip.scrollBy({left:offset, behavior:'auto'});
   };
   tabs.forEach((t, i) => {
-    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('click', () => selectTab(t, false, true));
     t.addEventListener('keydown', e => {
       const k = {ArrowRight:1, ArrowLeft:-1}[e.key];
-      if (k) { e.preventDefault(); selectTab(tabs[(i + k + tabs.length) % tabs.length], true); }
-      if (e.key === 'Home') { e.preventDefault(); selectTab(tabs[0], true); }
-      if (e.key === 'End') { e.preventDefault(); selectTab(tabs[tabs.length - 1], true); }
+      if (k) { e.preventDefault(); selectTab(tabs[(i + k + tabs.length) % tabs.length], true, true); }
+      if (e.key === 'Home') { e.preventDefault(); selectTab(tabs[0], true, true); }
+      if (e.key === 'End') { e.preventDefault(); selectTab(tabs[tabs.length - 1], true, true); }
     });
   });
-  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => {
-    const t = document.getElementById('t-' + a.dataset.tab); if (t) selectTab(t);
+  const openProduct = (name, focus, smooth) => {
+    const tab = tabs.find(t => t.id === 't-' + name);
+    if (!tab) return;
+    selectTab(tab, false);
+    const panel = document.getElementById(tab.getAttribute('aria-controls'));
+    const target = mobileQuery.matches ? panel.querySelector('figure') : panel;
+    if (focus) {
+      if (target.tagName === 'FIGURE') target.setAttribute('aria-label', panel.querySelector('h4').textContent + ' screenshot');
+      target.tabIndex = -1; target.focus({preventScroll:true});
+    }
+    target.scrollIntoView({block:'start', behavior: smooth && !reduce ? 'smooth' : 'auto'});
+  };
+  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (!tabs.some(t => t.id === 't-' + a.dataset.tab)) return;
+    e.preventDefault();
+    const hash = '#p-' + a.dataset.tab;
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    openProduct(a.dataset.tab, true, true);
   }));
+  const openProductFromHash = () => {
+    if (location.hash.startsWith('#p-')) openProduct(location.hash.slice(3), false, false);
+  };
+  addEventListener('hashchange', openProductFromHash);
+  addEventListener('load', openProductFromHash);
 
   /* ---------- Reveal on scroll ---------- */
   const rev = document.querySelectorAll('.reveal');
